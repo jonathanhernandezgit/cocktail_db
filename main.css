@@ -69,6 +69,21 @@ a {
 
 }
 
+.about {
+    display: block;
+    text-align: center;
+    padding-top: 5rem;
+    width: 58vw;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.about p{
+    line-height:2rem;
+    font-weight:500;
+    letter-spacing:2px
+}
+
 .search {
     margin-top: 1rem;
 }
