@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cocktails App</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <script src="index.js"></script>
 <body>
-    
+    <div id="root">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="index.html">The<span id="cocktail_span">CockTail</span>DB
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <section class="search">
+                <form class="search-form">
+                    <div class="form-control">
+                        <label for="name">Search your favorite cocktail</label>
+                        <input type="text" name="name" id="name">
+                    </div>  
+                </form>
+            </section>
+            <section class="cocktails"></section>
+        </main>
+    </div>
 </body>
 </html>
