@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
-
+:root {
+   
+    max-width: 1920px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +23,26 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.3rem;
 }
 
-h1,h2,h3,h4,h5,h6, p {
-    margin-bottom: 1.25rem;
+h1,h2 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+    
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
 }
 
 ul {
@@ -58,15 +79,13 @@ a {
     justify-content: space-between;
     width: 90vw;
     margin: 0 auto;
-    max-width: 1280px;
-    
+    max-width: 1920px;
 }
 
 #cocktail_span {
     color: green;
     font-size: 1.2rem;
     font-weight: 500;
-
 }
 
 .about {
@@ -84,8 +103,14 @@ a {
     letter-spacing:2px
 }
 
+section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .search {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .search-form {
@@ -113,4 +138,94 @@ a {
     border-radius: 0.25rem;
     padding: 0.5rem;
     font-size: 1.2rem;
+}
+
+.title h2 {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.cocktails-container {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: grid;
+    background: #F1F5F8;
+    max-width: 1920px;   
+}
+
+.cocktail-card {
+    max-width: 768px;
+    height: auto;
+    background: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 2px 5px 3px 0 rgba(0,0,0,.5);
+    border-radius: .25rem;
+    transition: transform 0.25s, filter 0.25s;
+    transform: scale(1);
+}
+
+.btnReadMore{
+    display: block;
+    text-align: center;
+    background-color: #199319;
+    color: white;
+    margin: 1rem 0.5rem;
+    padding: 0.6rem 0.5rem;
+    border: none;
+}
+
+.btnReadMore:hover {
+    background-color: #006b00;
+    cursor: pointer;
+}
+
+.cocktail-card:hover {
+    transition: transform 0.25s, filter 0.25s;
+    transform: scale(1.1);
+}
+
+.cocktail-info {
+    padding: 1rem 2rem;
+}
+
+.cocktail-info p {
+    color: #3e3e3e;
+}
+
+.cocktail-info p span span {
+    font-weight: 300;
+    color: rgb(71,148,27);
+}
+
+.cocktail-ingredients {
+    display: none;
+}
+
+
+.cocktail-card img {
+    width: 100%;
+   
+}
+
+@media (min-width: 768px) {
+
+    .cocktails-container {
+        padding: 1rem 4.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 2rem;
+        grid-row-gap: 2rem;
+      
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .cocktails-container {
+        grid-template-columns: repeat(3, 3fr);
+    }
+
 }
