@@ -96,26 +96,26 @@ function printIngredientsAndMore (array, idDrink, strInstructions){
 
 
 document.addEventListener('DOMContentLoaded',() => {
-    document.querySelector('.form-control').addEventListener('keyup', (evt) =>{
-        let searchValue = evt.target.value
-        if (searchValue.length == 0){
-            document.location.reload()
-            return false
-        }
-      
-
-        console.log(evt.target.value + " "+searchValue.length)
-      
-
-        const fetchCocktailByName = async () => {
-            const response = await fetch(API_SEARCH + searchValue)
-            const cocktails = await response.json()
-            return cocktails
-        }
-        fetchCocktailByName().then(cocktail => {
-            displayCocktails(cocktail.drinks)
+    try{
+        document.querySelector('.form-control').addEventListener('keyup', (evt) =>{
+            let searchValue = evt.target.value
+            if (searchValue.length == 0){
+                document.location.reload()
+                return false
+            }      
+            const fetchCocktailByName = async () => {
+                const response = await fetch(API_SEARCH + searchValue)
+                const cocktails = await response.json()
+                return cocktails
+            }
+            fetchCocktailByName().then(cocktail => {
+                displayCocktails(cocktail.drinks)
+            })
         })
-    })
+    }catch(error){
+        console.error(error)
+    }
+  
 })
 
  
